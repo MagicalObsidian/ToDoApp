@@ -11,11 +11,9 @@ D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\Prism.dll
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\Prism.DryIoc.Wpf.dll
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\Prism.Wpf.dll
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp.csproj.AssemblyReference.cache
-D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\App.g.cs
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp_MarkupCompile.cache
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp_MarkupCompile.lref
-D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\MainWindow.baml
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp.g.resources
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp.AssemblyInfoInputs.cache
@@ -28,3 +26,13 @@ D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp.pdb
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ToDoApp.genruntimeconfig.cache
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\ref\ToDoApp.dll
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\App.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\MainView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\MainView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\IndexView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\MemoView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\SettingView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\ToDoView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\IndexView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\MemoView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\SettingView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\ToDoView.baml
