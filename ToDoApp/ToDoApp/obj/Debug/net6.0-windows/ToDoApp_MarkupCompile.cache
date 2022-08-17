@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\App.xaml
-5-231405858
+7-725841167
 
-142043378840
+221264724191
 20140277606
-Views\IndexView.xaml;Views\MainView.xaml;Views\MemoView.xaml;Views\SettingView.xaml;Views\ToDoView.xaml;
+Views\AboutView.xaml;Views\IndexView.xaml;Views\MainView.xaml;Views\MemoView.xaml;Views\SettingView.xaml;Views\SkinView.xaml;Views\ToDoView.xaml;
 
 False
 

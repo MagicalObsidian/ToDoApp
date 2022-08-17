@@ -60,7 +60,6 @@ namespace ToDoApp.ViewModels
             {
                 journal = back.Context.NavigationService.Journal;
             });
-
         }
 
         //定义委托字段 驱动导航命令

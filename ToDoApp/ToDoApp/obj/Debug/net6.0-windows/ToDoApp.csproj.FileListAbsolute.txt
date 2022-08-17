@@ -36,3 +36,8 @@ D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\Index
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\MemoView.baml
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\SettingView.baml
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\ToDoView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\SkinView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\SkinView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\AboutView.g.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\AboutView.baml

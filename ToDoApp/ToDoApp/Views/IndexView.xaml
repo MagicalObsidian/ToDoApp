@@ -1,16 +1,214 @@
-﻿<UserControl x:Class="ToDoApp.Views.IndexView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ToDoApp.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+﻿<UserControl
+    x:Class="ToDoApp.Views.IndexView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ToDoApp.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:ToDoApp.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:IndexViewModel}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
     <Grid>
-        <TextBlock 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center"
-            FontSize="100"
-            Text="Index Page"/>
+        <!--  三行  -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!--  第一行 招呼  -->
+        <TextBlock
+            Margin="15,5"
+            FontSize="30"
+            Text="你好，神奇的黑曜石！" />
+
+        <!--  第二行 任务信息显示控件  -->
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding TaskBars}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <!--  四列  -->
+                    <UniformGrid Columns="4" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <!--  每个信息显示控件设计  -->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="15"
+                        Background="{Binding Color}"
+                        CornerRadius="10">
+                        <!--  在 Border style 中设置触发器用于实现鼠标悬浮控件上效果  -->
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Effect">
+                                            <Setter.Value>
+                                                <DropShadowEffect
+                                                    BlurRadius="10"
+                                                    ShadowDepth="1"
+                                                    Color="#DDDDDD" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <!--  具体设计  -->
+                        <Grid>
+                            <StackPanel Margin="20,10" Orientation="Vertical">
+                                <!--  图标  -->
+                                <materialDesign:PackIcon
+                                    Width="30"
+                                    Height="30"
+                                    Kind="{Binding Icon}" />
+                                <!--  标题文本  -->
+                                <TextBlock
+                                    Margin="0,5"
+                                    FontSize="30"
+                                    Text="{Binding Title}" />
+
+                                <!--  数据  -->
+                                <TextBlock
+                                    FontSize="30"
+                                    FontWeight="Bold"
+                                    Text="{Binding Content}" />
+                            </StackPanel>
+
+                            <!--  圆圈装饰  -->
+                            <Canvas ClipToBounds="True">
+                                <Border
+                                    Canvas.Top="30"
+                                    Canvas.Right="-60"
+                                    Width="120"
+                                    Height="120"
+                                    Background="Aqua"
+                                    CornerRadius="100"
+                                    Opacity="0.1" />
+                                <Border
+                                    Canvas.Top="80"
+                                    Canvas.Right="-30"
+                                    Width="120"
+                                    Height="120"
+                                    Background="#FFFFFF"
+                                    CornerRadius="100"
+                                    Opacity="0.1" />
+                            </Canvas>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!--  第三行 详细待办事项和备忘录列表  -->
+        <Grid Grid.Row="2" Margin="0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  第一列 待办事项  -->
+            <Border
+                Margin="15,0"
+                Background="#bebebe"
+                CornerRadius="10"
+                Opacity="0.1" />
+            <DockPanel Margin="15,0">
+                <!--  顶部文本栏  -->
+                <DockPanel
+                    Margin="15,5"
+                    DockPanel.Dock="Top"
+                    LastChildFill="False">
+                    <TextBlock
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Text="待办事项" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Margin="0,10"
+                        VerticalAlignment="Top"
+                        DockPanel.Dock="Right"
+                        Style="{StaticResource MaterialDesignFloatingActionAccentButton}">
+
+                        <materialDesign:PackIcon Kind="Add" />
+                    </Button>
+                </DockPanel>
+                <!--  具体数据显示  -->
+                <ListBox
+                    HorizontalContentAlignment="Stretch"
+                    ItemsSource="{Binding ToDoDtos}"
+                    ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel MaxHeight="80" LastChildFill="False">
+                                <ToggleButton DockPanel.Dock="Right" />
+                                <StackPanel>
+                                    <TextBlock
+                                        FontSize="20"
+                                        FontWeight="Bold"
+                                        Text="{Binding Title}" />
+                                    <TextBlock
+                                        Margin="0,5"
+                                        Opacity="0.5"
+                                        Text="{Binding Content}" />
+                                </StackPanel>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+
+            <!--  第二列 备忘录  -->
+            <Border
+                Grid.Column="1"
+                Margin="15,0"
+                Background="#bebebe"
+                CornerRadius="10"
+                Opacity="0.1" />
+            <DockPanel Grid.Column="1" Margin="15,0">
+                <!--  顶部文本栏  -->
+                <DockPanel
+                    Margin="15,5"
+                    DockPanel.Dock="Top"
+                    LastChildFill="False">
+                    <TextBlock
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Text="备忘录" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Margin="0,10"
+                        VerticalAlignment="Top"
+                        DockPanel.Dock="Right"
+                        Style="{StaticResource MaterialDesignFloatingActionAccentButton}">
+
+                        <materialDesign:PackIcon Kind="Add" />
+                    </Button>
+                </DockPanel>
+                <!--  具体数据显示  -->
+                <ListBox ItemsSource="{Binding MemoDtos}" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Text="{Binding Title}" />
+                                <TextBlock
+                                    Margin="0,5"
+                                    Opacity="0.5"
+                                    Text="{Binding Content}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Grid>
     </Grid>
 </UserControl>

@@ -1,9 +1,4 @@
 ﻿using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ToDoApp.Common.Models
 {
@@ -44,7 +39,5 @@ namespace ToDoApp.Common.Models
             get { return nameSpace; }
             set { nameSpace = value; }
         }
-
-
     }
 }

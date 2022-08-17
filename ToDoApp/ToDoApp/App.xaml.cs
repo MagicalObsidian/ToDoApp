@@ -33,6 +33,9 @@ namespace ToDoApp
             containerRegistry.RegisterForNavigation<MemoView, MemoViewModel>();
             containerRegistry.RegisterForNavigation<SettingView, SettingViewModel>();
 
+            containerRegistry.RegisterForNavigation<SkinView, SkinViewModel>();
+            containerRegistry.RegisterForNavigation<AboutView>();
+
         }
 
     }
