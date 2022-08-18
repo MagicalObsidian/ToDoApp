@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ToDoApp.Common.Models;
+using ToDoApp.Shared.Dtos;
 
 namespace ToDoApp.ViewModels
 {

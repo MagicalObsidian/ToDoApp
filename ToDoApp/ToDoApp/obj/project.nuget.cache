@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tpTk9pA/XiBc6qEkIS9r7tQ0WVLSFpWxXepHl1bjylbo1NZDRrHB1tcplS0DlB83LlG659oh3t4dTtis+aVHbQ==",
+  "dgSpecHash": "ojQlmpox69iG8nOulc5Axk34+SyfyswgsB1Gvzqtjt8vGcSLiW06P1nzjf4hqLOSjMNo+W2JO8Plic7gsi8Dbg==",
   "success": true,
   "projectFilePath": "D:\\Work\\GithubClone\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,11 @@
     "C:\\Users\\11916\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\11916\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\prism.dryioc\\8.1.97\\prism.dryioc.8.1.97.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
+    "C:\\Users\\11916\\.nuget\\packages\\restsharp\\106.12.0\\restsharp.106.12.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",

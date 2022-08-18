@@ -1,0 +1,12 @@
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\bin\Debug\net6.0\ToDoApp.Shared.deps.json
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\bin\Debug\net6.0\ToDoApp.Shared.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\bin\Debug\net6.0\ToDoApp.Shared.pdb
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.csproj.AssemblyReference.cache
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.AssemblyInfoInputs.cache
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.AssemblyInfo.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.csproj.CoreCompileInputs.cache
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\refint\ToDoApp.Shared.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ToDoApp.Shared.pdb
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Shared\obj\Debug\net6.0\ref\ToDoApp.Shared.dll

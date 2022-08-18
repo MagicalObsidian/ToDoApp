@@ -1,0 +1,7 @@
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.csproj.AssemblyReference.cache
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.AssemblyInfoInputs.cache
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.AssemblyInfo.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.csproj.CoreCompileInputs.cache
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\obj\Debug\net5.0\ToDoApp.Api.MvcApplicationPartsAssemblyInfo.cache

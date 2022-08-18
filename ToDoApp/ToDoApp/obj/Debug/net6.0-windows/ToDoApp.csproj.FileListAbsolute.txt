@@ -41,3 +41,7 @@ D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\GeneratedIn
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\SkinView.baml
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\AboutView.g.cs
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\obj\Debug\net6.0-windows\Views\AboutView.baml
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\RestSharp.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\ToDoApp.Shared.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\bin\Debug\net6.0-windows\ToDoApp.Shared.pdb

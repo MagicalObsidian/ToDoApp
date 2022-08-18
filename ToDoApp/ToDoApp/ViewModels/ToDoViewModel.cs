@@ -1,12 +1,19 @@
-﻿using Prism.Commands;
+﻿using ToDoApp.Common;
+using ToDoApp.Common.Models;
+using ToDoApp.Extensions;
+using ToDoApp.Service;
+using ToDoApp.Shared.Dtos;
+using ToDoApp.Shared.Parameters;
+using Prism.Commands;
+using Prism.Ioc;
 using Prism.Mvvm;
+using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToDoApp.Common.Models;
 
 namespace ToDoApp.ViewModels
 {
@@ -15,13 +22,13 @@ namespace ToDoApp.ViewModels
         /// <summary>
         /// 构造
         /// </summary>
-        public ToDoViewModel()
+        public ToDoViewModel(IToDoService service)
         {
             ToDoDtos = new ObservableCollection<ToDoDto>();
 
-            CreateToDoList();
-
             AddCommand = new DelegateCommand(Add);
+            this.service = service;
+            CreateToDoList();
         }
 
 
@@ -44,6 +51,7 @@ namespace ToDoApp.ViewModels
         /// 右侧添加窗口是否展开 字段   
         /// </summary>
         private bool isRightDrawerOpen;
+        private readonly IToDoService service;
 
         public bool IsRightDrawerOpen
         {
@@ -56,15 +64,22 @@ namespace ToDoApp.ViewModels
         /// <summary>
         /// 创建 待办事项 数据列表
         /// </summary>
-        private void CreateToDoList()
+        async void CreateToDoList()
         {
-            for (int i = 0; i < 20; i++)
+            var todoResult = await service.GetAllAsync(new Shared.Parameters.QueryParameter()
             {
-                ToDoDtos.Add(new ToDoDto()
+                PageIndex = 0,  
+                PageSize = 100,
+                
+            });
+
+            if(todoResult.Status)
+            {
+                ToDoDtos.Clear();
+                foreach (var item in todoResult.Result.Items)
                 {
-                    Title = "标题" + i,
-                    Content = "测试数据..."
-                });
+                    ToDoDtos.Add(item);
+                }
             }
         }
 
