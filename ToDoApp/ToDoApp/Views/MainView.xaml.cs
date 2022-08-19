@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prism.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ToDoApp.Extensions;
 
 namespace ToDoApp.Views
 {
@@ -19,9 +21,20 @@ namespace ToDoApp.Views
     /// </summary>
     public partial class MainView : Window
     {
-        public MainView()
+        public MainView(IEventAggregator aggregator)
         {
             InitializeComponent();
+
+            //注册等待消息窗口
+            aggregator.Resgiter(arg =>
+            {
+                DialogHost.IsOpen = arg.IsOpen;
+
+                if(DialogHost.IsOpen)
+                {
+                    DialogHost.DialogContent = new ProgressView();
+                }
+            });
 
             //当选中左侧边导航栏的一项时，左侧导航栏收起
             menuBar.SelectionChanged += (s, e) => 

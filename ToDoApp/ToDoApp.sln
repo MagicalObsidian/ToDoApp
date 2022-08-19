@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp", "ToDoApp\ToDoApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.Api", "ToDoApp.Api\ToDoApp.Api.csproj", "{E335889E-7C3D-45EA-8184-ADD2EE63595D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Shared", "ToDoApp.Shared\ToDoApp.Shared.csproj", "{73C22BB2-731A-472C-AC72-CF77A7507D21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.Shared", "ToDoApp.Shared\ToDoApp.Shared.csproj", "{73C22BB2-731A-472C-AC72-CF77A7507D21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

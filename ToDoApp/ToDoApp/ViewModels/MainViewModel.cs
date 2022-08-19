@@ -1,4 +1,5 @@
 ﻿using Prism.Commands;
+using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
@@ -7,26 +8,24 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToDoApp.Common;
 using ToDoApp.Common.Models;
 using ToDoApp.Extensions;
 
 namespace ToDoApp.ViewModels
 {
-    public class MainViewModel : BindableBase
+    public class MainViewModel : BindableBase, IConfigureService
     {
         /// <summary>
         /// 主视窗构造
         /// </summary>
-        public MainViewModel(IRegionManager regionManager)
+        public MainViewModel(IContainerProvider containerProvider, IRegionManager regionManager)
         {
             //创建一个菜单栏
             MenuBars = new ObservableCollection<MenuBar>();
 
             //封装 Navigate 方法
             NavigateCommand = new DelegateCommand<MenuBar>(Navigate);
-
-            //给菜单栏添加菜单项
-            CreateMenuBar();
 
             //后退命令
             GoBackCommand = new DelegateCommand(() =>
@@ -45,6 +44,8 @@ namespace ToDoApp.ViewModels
                     journal.GoForward();
                 }
             });
+
+            this.containerProvider = containerProvider;
 
             //给区域管理器 赋参数值
             this.regionManager = regionManager;
@@ -68,6 +69,7 @@ namespace ToDoApp.ViewModels
         public DelegateCommand GoForWardCommand { get; private set; }  
 
         private ObservableCollection<MenuBar> menuBars;
+        private readonly IContainerProvider containerProvider;
         private readonly IRegionManager regionManager;//区域管理字段
         private IRegionNavigationJournal journal;
 
@@ -88,6 +90,16 @@ namespace ToDoApp.ViewModels
             MenuBars.Add(new MenuBar() { Icon = "Cog", Title = "设置", NameSpace = "SettingView"});
         }
 
+        /// <summary>
+        /// 配置首页初始化参数
+        /// </summary>
+        public void Configure()
+        {
+            //给菜单栏添加菜单项
+            CreateMenuBar();
 
+            //初始配置显示主页
+            regionManager.Regions[PrismManager.MainViewRegionName].RequestNavigate("IndexView");
+        }
     }
 }

@@ -44,9 +44,9 @@ namespace ToDoApp.Api.Service
             try
             {
                 var repository = work.GetRepository<Memo>();
-                var todo = await repository
+                var memo = await repository
                     .GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(id));
-                repository.Delete(todo);
+                repository.Delete(memo);
                 if (await work.SaveChangesAsync() > 0)
                     return new ApiResponse(true, "");
                 return new ApiResponse("删除数据失败");
@@ -62,12 +62,12 @@ namespace ToDoApp.Api.Service
             try
             {
                 var repository = work.GetRepository<Memo>();
-                var todos = await repository.GetPagedListAsync(predicate:
+                var memos = await repository.GetPagedListAsync(predicate:
                    x => string.IsNullOrWhiteSpace(parameter.Search) ? true : x.Title.Contains(parameter.Search),
                    pageIndex: parameter.PageIndex,
                    pageSize: parameter.PageSize,
                    orderBy: source => source.OrderByDescending(t => t.CreateDate));
-                return new ApiResponse(true, todos);
+                return new ApiResponse(true, memos);
             }
             catch (Exception ex)
             {
@@ -80,8 +80,8 @@ namespace ToDoApp.Api.Service
             try
             {
                 var repository = work.GetRepository<Memo>();
-                var todo = await repository.GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(id));
-                return new ApiResponse(true, todo);
+                var memo = await repository.GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(id));
+                return new ApiResponse(true, memo);
             }
             catch (Exception ex)
             {
@@ -93,18 +93,18 @@ namespace ToDoApp.Api.Service
         {
             try
             {
-                var dbToDo = Mapper.Map<Memo>(model);
+                var dbMeMo = Mapper.Map<Memo>(model);
                 var repository = work.GetRepository<Memo>();
-                var todo = await repository.GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(dbToDo.Id));
+                var memo = await repository.GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(dbMeMo.Id));
 
-                todo.Title = dbToDo.Title;
-                todo.Content = dbToDo.Content;
-                todo.UpdateDate = DateTime.Now;
+                memo.Title = dbMeMo.Title;
+                memo.Content = dbMeMo.Content;
+                memo.UpdateDate = DateTime.Now;
 
-                repository.Update(todo);
+                repository.Update(memo);
 
                 if (await work.SaveChangesAsync() > 0)
-                    return new ApiResponse(true, todo);
+                    return new ApiResponse(true, memo);
                 return new ApiResponse("更新数据异常！");
             }
             catch (Exception ex)
