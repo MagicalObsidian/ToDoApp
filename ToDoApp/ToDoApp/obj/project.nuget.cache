@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ojQlmpox69iG8nOulc5Axk34+SyfyswgsB1Gvzqtjt8vGcSLiW06P1nzjf4hqLOSjMNo+W2JO8Plic7gsi8Dbg==",
+  "dgSpecHash": "qw8tELUcN75D3yqEFks/683ESU3iQnMBivYCPHcyyVq/01bCCtqRYjcu+ZAwIhRJTOYn+nOEXx+k81kZ39mLuw==",
   "success": true,
   "projectFilePath": "D:\\Work\\GithubClone\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\11916\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
-    "C:\\Users\\11916\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
-    "C:\\Users\\11916\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",
+    "C:\\Users\\11916\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",
+    "C:\\Users\\11916\\.nuget\\packages\\materialdesignthemes\\4.1.0\\materialdesignthemes.4.1.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\11916\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",

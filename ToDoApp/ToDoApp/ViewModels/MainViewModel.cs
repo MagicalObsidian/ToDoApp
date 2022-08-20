@@ -16,6 +16,16 @@ namespace ToDoApp.ViewModels
 {
     public class MainViewModel : BindableBase, IConfigureService
     {
+        private string userName;
+
+        public string UserName
+        {
+            get { return userName; }
+            set { userName = value; RaisePropertyChanged(); }
+        }
+
+        public DelegateCommand LoginOutCommand { get; private set; }
+
         /// <summary>
         /// 主视窗构造
         /// </summary>
@@ -43,6 +53,12 @@ namespace ToDoApp.ViewModels
                 {
                     journal.GoForward();
                 }
+            });
+
+            LoginOutCommand = new DelegateCommand(() =>
+            {
+                //注销当前用户
+                App.LoginOut(containerProvider);
             });
 
             this.containerProvider = containerProvider;
@@ -95,6 +111,9 @@ namespace ToDoApp.ViewModels
         /// </summary>
         public void Configure()
         {
+            //获取用户名
+            UserName = AppSession.UserName;
+
             //给菜单栏添加菜单项
             CreateMenuBar();
 

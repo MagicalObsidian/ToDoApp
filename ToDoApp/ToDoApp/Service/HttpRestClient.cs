@@ -19,46 +19,28 @@ namespace ToDoApp.Service
             this.apiUrl = apiUrl;
             client = new RestClient();
         }
-
         public async Task<ApiResponse> ExecuteAsync(BaseRequest baseRequest)
         {
-            var request = new RestRequest(baseRequest.Method);
-            request.AddHeader("Content-Type", baseRequest.ContentType);
+            var request = new RestRequest(apiUrl + baseRequest.Route);
+            request.Method = baseRequest.Method;
 
             if (baseRequest.Parameter != null)
-                request.AddParameter("param", JsonConvert.SerializeObject(baseRequest.Parameter), ParameterType.RequestBody);
-            client.BaseUrl = new Uri(apiUrl + baseRequest.Route);
+                request.AddJsonBody(JsonConvert.SerializeObject(baseRequest.Parameter));
+
             var response = await client.ExecuteAsync(request);
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                return JsonConvert.DeserializeObject<ApiResponse>(response.Content);
-
-            else
-                return new ApiResponse()
-                {
-                    Status = false,
-                    Result = null,
-                    Message = response.ErrorMessage
-                };
+            return JsonConvert.DeserializeObject<ApiResponse>(response.Content);
         }
-
         public async Task<ApiResponse<T>> ExecuteAsync<T>(BaseRequest baseRequest)
         {
-            var request = new RestRequest(baseRequest.Method);
-            request.AddHeader("Content-Type", baseRequest.ContentType);
+            var request = new RestRequest(apiUrl + baseRequest.Route);
+            request.Method = baseRequest.Method;
 
             if (baseRequest.Parameter != null)
-                request.AddParameter("param", JsonConvert.SerializeObject(baseRequest.Parameter), ParameterType.RequestBody);
-            client.BaseUrl = new Uri(apiUrl + baseRequest.Route);
-            var response = await client.ExecuteAsync(request);
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                return JsonConvert.DeserializeObject<ApiResponse<T>>(response.Content);
+                request.AddJsonBody(JsonConvert.SerializeObject(baseRequest.Parameter));
 
-            else
-                return new ApiResponse<T>()
-                {
-                    Status = false,
-                    Message = response.ErrorMessage
-                };
+
+            var response = await client.ExecuteAsync(request);
+            return JsonConvert.DeserializeObject<ApiResponse<T>>(response.Content);
         }
     }
 }

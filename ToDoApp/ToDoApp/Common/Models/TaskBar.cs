@@ -28,7 +28,7 @@ namespace ToDoApp.Common.Models
         public string Title
         {
             get { return title; }
-            set { title = value; }
+            set { title = value; RaisePropertyChanged(); }
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace ToDoApp.Common.Models
         public string Content
         {
             get { return content; }
-            set { content = value; }
+            set { content = value; RaisePropertyChanged(); }
         }
 
         /// <summary>

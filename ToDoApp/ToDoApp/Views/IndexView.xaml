@@ -75,7 +75,7 @@
                         </Border.Style>
                         <!--  具体设计  -->
                         <Grid>
-                            <StackPanel Margin="20,10" Orientation="Vertical">
+                            <StackPanel Margin="20,10">
                                 <!--  图标  -->
                                 <materialDesign:PackIcon
                                     Width="30"
@@ -227,7 +227,7 @@
                 <!--  具体数据显示  -->
                 <ListBox
                     x:Name="memoList"
-                    ItemsSource="{Binding ummary.MemoList}"
+                    ItemsSource="{Binding Summary.MemoList}"
                     ScrollViewer.VerticalScrollBarVisibility="Hidden">
 
                     <!--  双击修改事件  -->

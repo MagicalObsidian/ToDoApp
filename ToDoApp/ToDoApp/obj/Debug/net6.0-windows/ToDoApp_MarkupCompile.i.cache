@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp\App.xaml
 121243662866
 
-531490218153
-204-2092220486
+54235253834
+204581611055
 Views\AboutView.xaml;Views\Dialogs\AddMemoView.xaml;Views\Dialogs\AddToDoView.xaml;Views\IndexView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\MemoView.xaml;Views\MsgView.xaml;Views\ProgressView.xaml;Views\SettingView.xaml;Views\SkinView.xaml;Views\ToDoView.xaml;
 
-True
+False
 

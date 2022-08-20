@@ -75,7 +75,16 @@
                 </DockPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
 
-            <DockPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <!--  消息栏  -->
+                <materialDesign:Snackbar
+                    x:Name="Snackbar"
+                    Panel.ZIndex="1"
+                    MessageQueue="{materialDesign:MessageQueue}" />
                 <!--  顶部导航栏  -->
                 <materialDesign:ColorZone
                     x:Name="ColorZone"
@@ -85,18 +94,6 @@
                     Mode="PrimaryMid">
                     <DockPanel LastChildFill="False">
                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
-
-                            <Image
-                                Width="30"
-                                Height="30"
-                                Source="/Images/ali.jpg">
-                                <Image.Clip>
-                                    <EllipseGeometry
-                                        Center="15,15"
-                                        RadiusX="15"
-                                        RadiusY="15" />
-                                </Image.Clip>
-                            </Image>
 
                             <Button
                                 x:Name="btnMin"
@@ -113,6 +110,29 @@
                                 Style="{StaticResource MaterialDesignFlatMidBgButton}" />
 
                         </StackPanel>
+
+                        <!--  头像  -->
+                        <materialDesign:PopupBox DockPanel.Dock="Right">
+                            <materialDesign:PopupBox.ToggleContent>
+                                <Image
+                                    Width="30"
+                                    Height="30"
+                                    Source="/Images/ali.jpg">
+                                    <Image.Clip>
+                                        <EllipseGeometry
+                                            Center="15,15"
+                                            RadiusX="15"
+                                            RadiusY="15" />
+                                    </Image.Clip>
+                                </Image>
+                            </materialDesign:PopupBox.ToggleContent>
+
+                            <StackPanel>
+                                <!--<Button Command="{Binding AppCenterCommand}" Content="个人中心"/>-->
+                                <Button Command="{Binding LoginOutCommand}" Content="注销当前账户" />
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+
 
                         <StackPanel Orientation="Horizontal">
                             <ToggleButton
@@ -157,9 +177,9 @@
                 </materialDesign:ColorZone>
 
                 <!--  主要内容区域  -->
-                <ContentControl prism:RegionManager.RegionName="{x:Static ext:PrismManager.MainViewRegionName}" />
+                <ContentControl Grid.Row="1" prism:RegionManager.RegionName="{x:Static ext:PrismManager.MainViewRegionName}" />
 
-            </DockPanel>
+            </Grid>
         </materialDesign:DrawerHost>
     </materialDesign:DialogHost>
 

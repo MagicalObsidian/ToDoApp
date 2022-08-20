@@ -10,9 +10,10 @@
     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:pass="clr-namespace:ToDoApp.Extensions"
     xmlns:prism="http://prismlibrary.com/"
+    xmlns:viewmodels="clr-namespace:ToDoApp.ViewModels"
     Width="600"
     Height="350"
-    d:DataContext="{d:DesignInstance Type=dialogs:LoginViewModel}"
+    d:DataContext="{d:DesignInstance Type=viewmodels:LoginViewModel}"
     mc:Ignorable="d">
     <prism:Dialog.WindowStyle>
         <Style TargetType="Window">
@@ -30,14 +31,14 @@
         </Grid.ColumnDefinitions>
 
         <md:Snackbar
-            x:Name="LoginSnakeBar"
+            x:Name="LoginSnackBar"
             Grid.ColumnSpan="2"
             Panel.ZIndex="1"
             MessageQueue="{md:MessageQueue}" />
 
         <Image Margin="50" Source="/Images/YuMao.jpg" />
 
-        <md:Transitioner Grid.Column="1" SelectedIndex="{Binding SelectIndex, FallbackValue=0}">
+        <md:Transitioner Grid.Column="1" SelectedIndex="{Binding SelectedIndex, FallbackValue=0}">
             <md:TransitionerSlide>
                 <DockPanel Margin="15" VerticalAlignment="Center">
                     <TextBlock
@@ -51,7 +52,7 @@
                         Margin="0,10"
                         md:HintAssist.Hint="请输入账号"
                         DockPanel.Dock="Top"
-                        Text="{Binding UserName}" Cursor="Arrow" />
+                        Text="{Binding Account}" />
                     <PasswordBox
                         Margin="0,10"
                         md:HintAssist.Hint="请输入密码"

@@ -41,24 +41,6 @@ namespace ToDoApp.Api
             .AddCustomRepository<Memo, MemoRepository>()
             .AddCustomRepository<User, UserRepository>();
 
-
-            services.AddControllers();
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDoApp.Api", Version = "v1" });
-            });
-
-
-            //services.AddDbContext<ToDoAppContext>(option =>
-            //{
-            //    var connectionString = Configuration.GetConnectionString("ToDoConnection");
-            //    option.UseSqlite(connectionString);
-            //}).AddUnitOfWork<ToDoAppContext>()
-            //.AddCustomRepository<ToDo, ToDoRepository>()
-            //.AddCustomRepository<Memo, MemoRepository>()
-            //.AddCustomRepository<User, UserRepository>();
-
             services.AddTransient<IToDoService, ToDoService>();
             services.AddTransient<IMemoService, MemoService>();
             services.AddTransient<ILoginService, LoginService>();
@@ -71,7 +53,11 @@ namespace ToDoApp.Api
 
             services.AddSingleton(automapperConfog.CreateMapper());
 
-
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDoApp.Api", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

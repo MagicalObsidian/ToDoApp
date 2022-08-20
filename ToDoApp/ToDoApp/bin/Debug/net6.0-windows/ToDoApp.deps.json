@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ToDoApp/1.0.0": {
         "dependencies": {
-          "MaterialDesignThemes": "4.5.0",
+          "MaterialDesignThemes": "4.1.0",
           "Newtonsoft.Json": "13.0.1",
           "Prism.DryIoc": "8.1.97",
           "RestSharp": "106.12.0",
@@ -29,22 +29,22 @@
           }
         }
       },
-      "MaterialDesignColors/2.0.6": {
+      "MaterialDesignColors/2.0.1": {
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {
-            "assemblyVersion": "2.0.6.0",
-            "fileVersion": "2.0.6.0"
+            "assemblyVersion": "2.0.1.2556",
+            "fileVersion": "2.0.1.2556"
           }
         }
       },
-      "MaterialDesignThemes/4.5.0": {
+      "MaterialDesignThemes/4.1.0": {
         "dependencies": {
-          "MaterialDesignColors": "2.0.6"
+          "MaterialDesignColors": "2.0.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.0"
+            "assemblyVersion": "4.1.0.2556",
+            "fileVersion": "4.1.0.2556"
           }
         }
       },
@@ -186,19 +186,19 @@
       "path": "dryioc.dll/4.7.7",
       "hashPath": "dryioc.dll.4.7.7.nupkg.sha512"
     },
-    "MaterialDesignColors/2.0.6": {
+    "MaterialDesignColors/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eZNiLlMy7Ag9f3MnhVxSzkG2IIGCaRfqZKt6npEcEjLQ9kSgCYO5oUd8AgJjhpfCKwyf+GO5VDc5R88QSDTHHg==",
-      "path": "materialdesigncolors/2.0.6",
-      "hashPath": "materialdesigncolors.2.0.6.nupkg.sha512"
+      "sha512": "sha512-Azl8nN23SD6QPE0PdsfpKiIqWTvH7rzXwgXPiFSEt91NFOrwB5cx3iq/sbINWMZunhXJ32+jVUHiV03B8eJbZw==",
+      "path": "materialdesigncolors/2.0.1",
+      "hashPath": "materialdesigncolors.2.0.1.nupkg.sha512"
     },
-    "MaterialDesignThemes/4.5.0": {
+    "MaterialDesignThemes/4.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-G26hIGFwGH5q46CD59zGiAs4aLsASsKCCBqgnISPwIcq8pAfKRRAKxXfOQJgNDyIUnVm5Ug67gldsEgeWP6GoQ==",
-      "path": "materialdesignthemes/4.5.0",
-      "hashPath": "materialdesignthemes.4.5.0.nupkg.sha512"
+      "sha512": "sha512-WqrO9AbtdE4pLPtDk/C5BZRnkgWFwVGyUHWj7tRJrgnKl089DEobVXBCLeqp2mkgBeFHj4Xe3AfWyhmlnO6AZA==",
+      "path": "materialdesignthemes/4.1.0",
+      "hashPath": "materialdesignthemes.4.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

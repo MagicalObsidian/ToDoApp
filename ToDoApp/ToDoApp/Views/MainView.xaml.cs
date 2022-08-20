@@ -1,4 +1,6 @@
-﻿using Prism.Events;
+﻿using ToDoApp.Common;
+using ToDoApp.Extensions;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ToDoApp.Extensions;
 
 namespace ToDoApp.Views
 {
@@ -21,9 +22,18 @@ namespace ToDoApp.Views
     /// </summary>
     public partial class MainView : Window
     {
-        public MainView(IEventAggregator aggregator)
+        private readonly IDialogHostService dialogHostService;
+
+
+        public MainView(IEventAggregator aggregator, IDialogHostService dialogHostService)
         {
             InitializeComponent();
+
+            //注册提示消息
+            aggregator.ResgiterMessage(arg =>
+            {
+                Snackbar.MessageQueue.Enqueue(arg.Message);
+            });
 
             //注册等待消息窗口
             aggregator.Resgiter(arg =>
@@ -41,8 +51,6 @@ namespace ToDoApp.Views
             {
                 drawerHost.IsLeftDrawerOpen = false;
             };
-
-
 
             //导航栏点击拖拽移动
             ColorZone.MouseMove += (s, e) =>
@@ -66,9 +74,6 @@ namespace ToDoApp.Views
                 }
             };
 
-
-
-
             //最小化按钮
             btnMin.Click += (s, e) =>
             {
@@ -89,12 +94,18 @@ namespace ToDoApp.Views
             };
 
             //退出按钮
-            btnClose.Click += (s, e) =>
+            btnClose.Click += async (s, e) =>
             {
+                var dialogResult = await dialogHostService.Question("温馨提示", "确认退出系统?");
+                if (dialogResult.Result != Prism.Services.Dialogs.ButtonResult.OK) return;
                 this.Close();
             };
+
+            menuBar.SelectionChanged += (s, e) =>
+            {
+                drawerHost.IsLeftDrawerOpen = false;
+            };
+            this.dialogHostService = dialogHostService;
         }
-
-
     }
 }

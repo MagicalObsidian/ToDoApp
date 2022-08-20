@@ -37,7 +37,7 @@ namespace ToDoApp.Api.Service
                 {
                     Account = model.Account,
                     UserName = model.UserName,
-                    Id = model.Id
+                    Id = model.Id,
                 });
             }
             catch (Exception ex)
