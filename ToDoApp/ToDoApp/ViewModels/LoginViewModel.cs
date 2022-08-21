@@ -151,6 +151,7 @@ namespace ToDoApp.ViewModels
             {
                 //AppSession.UserName = loginResult.Result.UserName;
                 RequestClose?.Invoke(new DialogResult(ButtonResult.OK));
+                return;
             }
             else
             {
