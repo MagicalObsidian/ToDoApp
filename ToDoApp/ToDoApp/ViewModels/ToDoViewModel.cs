@@ -19,7 +19,7 @@ namespace ToDoApp.ViewModels
 {
     public class ToDoViewModel : NavigationViewModel
     {
-        //private readonly IDialogHostService dialogHost;
+        private readonly IDialogHostService dialogHost;
 
         /// <summary>
         /// 构造
@@ -32,7 +32,7 @@ namespace ToDoApp.ViewModels
             DeleteCommand = new DelegateCommand<ToDoDto>(Delete);
             SelectedCommand = new DelegateCommand<ToDoDto>(Selected);
 
-            //dialogHost = provider.Resolve<IDialogHostService>();
+            dialogHost = provider.Resolve<IDialogHostService>();
             this.service = service;
             //CreateToDoList();
         }

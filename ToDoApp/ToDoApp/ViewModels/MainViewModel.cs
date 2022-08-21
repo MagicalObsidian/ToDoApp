@@ -31,6 +31,7 @@ namespace ToDoApp.ViewModels
         /// </summary>
         public MainViewModel(IContainerProvider containerProvider, IRegionManager regionManager)
         {
+
             //创建一个菜单栏
             MenuBars = new ObservableCollection<MenuBar>();
 
