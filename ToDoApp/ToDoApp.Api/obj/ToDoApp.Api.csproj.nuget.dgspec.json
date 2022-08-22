@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -138,6 +142,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

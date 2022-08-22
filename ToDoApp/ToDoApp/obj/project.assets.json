@@ -118,13 +118,13 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "RestSharp/106.12.0": {
+      "RestSharp/108.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/RestSharp.dll": {}
+          "lib/net6.0/RestSharp.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/RestSharp.dll": {}
+          "lib/net6.0/RestSharp.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -228,6 +228,9 @@
       "ToDoApp.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RestSharp": "108.0.1"
+        },
         "compile": {
           "bin/placeholder/ToDoApp.Shared.dll": {}
         },
@@ -484,18 +487,20 @@
         "readme.txt"
       ]
     },
-    "RestSharp/106.12.0": {
-      "sha512": "irOsQHe5nTJB0BKxGQnTX1dsgCPl5dLTxvL7gbl98JiFPiHMN4wpFyUG/66ZpaFCsIrPKh6XwozWXlwYe9JwYQ==",
+    "RestSharp/108.0.1": {
+      "sha512": "XKwuwWq7A4dxZ8l9QkS2+ePLJ9ImmLaJSeFO6H2kpII4Us4n1NRs4w3c//8H2BYpL1XqBE8nmsd9aNCVBwXmOA==",
       "type": "package",
-      "path": "restsharp/106.12.0",
+      "path": "restsharp/108.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net452/RestSharp.dll",
-        "lib/net452/RestSharp.xml",
+        "lib/net5.0/RestSharp.dll",
+        "lib/net5.0/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
         "lib/netstandard2.0/RestSharp.dll",
         "lib/netstandard2.0/RestSharp.xml",
-        "restsharp.106.12.0.nupkg.sha512",
+        "restsharp.108.0.1.nupkg.sha512",
         "restsharp.nuspec",
         "restsharp.png"
       ]
@@ -1048,7 +1053,7 @@
       "MaterialDesignThemes >= 4.1.0",
       "Newtonsoft.Json >= 13.0.1",
       "Prism.DryIoc >= 8.1.97",
-      "RestSharp >= 106.12.0",
+      "RestSharp >= 108.0.1",
       "ToDoApp.Shared >= 1.0.0"
     ]
   },
@@ -1114,7 +1119,7 @@
           },
           "RestSharp": {
             "target": "Package",
-            "version": "[106.12.0, )"
+            "version": "[108.0.1, )"
           }
         },
         "imports": [

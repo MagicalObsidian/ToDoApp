@@ -71,22 +71,22 @@ namespace ToDoApp
                 .Register<HttpRestClient>(made: Parameters.Of.Type<string>(serviceKey: "webUrl"));
             containerRegistry.GetContainer().RegisterInstance(@"http://localhost:5146/", serviceKey: "webUrl");
 
-            containerRegistry.Register<ILoginService, LoginService>();
+            containerRegistry.Register<IDialogHostService, DialogHostService>();
             containerRegistry.Register<IToDoService, ToDoService>();
             containerRegistry.Register<IMemoService, MemoService>();
-            containerRegistry.Register<IDialogHostService, DialogHostService>();
+            containerRegistry.Register<ILoginService, LoginService>();
 
             containerRegistry.RegisterDialog<LoginView, LoginViewModel>();
 
             containerRegistry.RegisterForNavigation<AddToDoView, AddToDoViewModel>();
-            containerRegistry.RegisterForNavigation<AddMemoView, AdddMemoViewModel>();
-            containerRegistry.RegisterForNavigation<AboutView>();
-            containerRegistry.RegisterForNavigation<MsgView, MsgViewModel>();
-            containerRegistry.RegisterForNavigation<SkinView, SkinViewModel>();
+            containerRegistry.RegisterForNavigation<AddMemoView, AddMemoViewModel>();
             containerRegistry.RegisterForNavigation<IndexView, IndexViewModel>();
-            containerRegistry.RegisterForNavigation<ToDoView, ToDoViewModel>();
             containerRegistry.RegisterForNavigation<MemoView, MemoViewModel>();
+            containerRegistry.RegisterForNavigation<ToDoView, ToDoViewModel>();
             containerRegistry.RegisterForNavigation<SettingView, SettingViewModel>();
+            containerRegistry.RegisterForNavigation<SkinView, SkinViewModel>();
+            containerRegistry.RegisterForNavigation<AboutView, AboutViewModel>();
+            containerRegistry.RegisterForNavigation<MsgView, MsgViewModel>();
         }
     }
 }

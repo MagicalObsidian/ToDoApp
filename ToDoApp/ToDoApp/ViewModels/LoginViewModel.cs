@@ -122,7 +122,7 @@ namespace ToDoApp.ViewModels
             {
                 aggregator.SendMessage("注册成功", "Login");
                 SelectedIndex = 0;
-                //return;
+                return;
             }
             else
             {   
@@ -147,9 +147,9 @@ namespace ToDoApp.ViewModels
                 PassWord = PassWord
             });
 
-            if (loginResult != null && loginResult.Status)
+            if (loginResult.Status)
             {
-                //AppSession.UserName = loginResult.Result.UserName;
+                AppSession.UserName = loginResult.Result.UserName;
                 RequestClose?.Invoke(new DialogResult(ButtonResult.OK));
                 return;
             }

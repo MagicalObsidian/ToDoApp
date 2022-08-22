@@ -21,7 +21,7 @@ namespace ToDoApp.Service
         public async Task<ApiResponse<UserDto>> LoginAsync(UserDto user)
         {
             BaseRequest request = new BaseRequest();
-            request.Method = RestSharp.Method.POST;
+            request.Method = RestSharp.Method.Post;
             request.Route = $"api/{serviceName}/Login";
             request.Parameter = user;
             return await client.ExecuteAsync<UserDto>(request);
@@ -30,7 +30,7 @@ namespace ToDoApp.Service
         public async Task<ApiResponse> RegisterAsync(UserDto user)
         {
             BaseRequest request = new BaseRequest();
-            request.Method = RestSharp.Method.POST;
+            request.Method = RestSharp.Method.Post;
             request.Route = $"api/{serviceName}/Resgiter";
             request.Parameter = user;
             return await client.ExecuteAsync(request);

@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace ToDoApp.ViewModels.Dialogs
 {
-    public class AdddMemoViewModel : BindableBase, IDialogHostAware
+    public class AddMemoViewModel : BindableBase, IDialogHostAware
     {
-        public AdddMemoViewModel()
+        public AddMemoViewModel()
         {
             SaveCommand = new DelegateCommand(Save);
             CancelCommand = new DelegateCommand(Cancel);

@@ -8,28 +8,26 @@ namespace ToDoApp.Shared.Dtos
 {
     public class UserDto : BaseDto
     {
-        private string userName;
+        private string? userName;
+        private string? account;
+        private string? passWord;
 
-        public string UserName
+        public string? UserName
         {
             get { return userName; }
             set { userName = value; OnPropertyChanged(); }
         }
-         
-        private string account;
 
-        public string Account
+        public string? Account
         {
             get { return account; }
             set { account = value; OnPropertyChanged(); }
         }
-         
-        private string passWord;
 
-        public string PassWord
+        public string? PassWord
         {
             get { return passWord; }
             set { passWord = value; OnPropertyChanged(); }
-        } 
+        }
     }
 }

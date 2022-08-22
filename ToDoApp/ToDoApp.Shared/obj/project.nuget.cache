@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g6VTut2xofMUSBT6P0y7pO21FjqOoqIguoJOmildWm7/rQiXGFZa1ZaRzDqpkDpXNTy+dVg+C4GoqgmNAyapGQ==",
+  "dgSpecHash": "OD8/l2KmBXC5sImq3nP5fPKlv/fk1Co8R66qF//9BJdkkGQNQnYANrGt7Grlwv/T0rpIPjfsx63aryhYzmNeTw==",
   "success": true,
   "projectFilePath": "D:\\Work\\GithubClone\\ToDoApp\\ToDoApp\\ToDoApp.Shared\\ToDoApp.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\11916\\.nuget\\packages\\restsharp\\108.0.1\\restsharp.108.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -36,9 +36,13 @@
             Panel.ZIndex="1"
             MessageQueue="{md:MessageQueue}" />
 
-        <Image Margin="50" Source="/Images/YuMao.jpg" />
 
-        <md:Transitioner Grid.Column="1" SelectedIndex="{Binding SelectedIndex, FallbackValue=0}">
+        <Image Margin="60" Source="/Images/LoginToDo.jpg" />
+
+        <md:Transitioner
+            Grid.Column="1"
+            Margin="10"
+            SelectedIndex="{Binding SelectedIndex, FallbackValue=0}">
             <md:TransitionerSlide>
                 <DockPanel Margin="15" VerticalAlignment="Center">
                     <TextBlock
