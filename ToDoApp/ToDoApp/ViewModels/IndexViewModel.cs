@@ -24,10 +24,9 @@ namespace ToDoApp.ViewModels
         private readonly IDialogHostService dialog;
         private readonly IRegionManager regionManager;
 
-        public IndexViewModel(IContainerProvider provider,
-            IDialogHostService dialog) : base(provider)
+        public IndexViewModel(IContainerProvider provider, IDialogHostService dialog) : base(provider)
         {
-            Title = $"你好，{AppSession.UserName}! 现在是 {DateTime.Now.GetDateTimeFormats('D')[1].ToString()}";
+            Title = $"你好， {AppSession.UserName}!   今天是 {DateTime.Now.GetDateTimeFormats('D')[1].ToString()}";
             CreateTaskBars();
             ExecuteCommand = new DelegateCommand<string>(Execute);
             this.toDoService = provider.Resolve<IToDoService>();
@@ -219,6 +218,10 @@ namespace ToDoApp.ViewModels
             }
         }
 
+
+        /// <summary>
+        /// 创建首页任务栏
+        /// </summary>
         void CreateTaskBars()
         {
             TaskBars = new ObservableCollection<TaskBar>();

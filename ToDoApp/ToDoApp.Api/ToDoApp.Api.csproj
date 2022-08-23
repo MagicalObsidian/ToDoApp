@@ -30,4 +30,10 @@
     <Folder Include="Service\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="todo.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

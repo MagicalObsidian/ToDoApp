@@ -56,3 +56,4 @@ D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\bin\Debug\net6.0\ToDoApp.Shared.
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\bin\Debug\net6.0\AutoMapper.dll
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.AutoHistory.dll
 D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\bin\Debug\net6.0\RestSharp.dll
+D:\Work\GithubClone\ToDoApp\ToDoApp\ToDoApp.Api\bin\Debug\net6.0\todo.db
